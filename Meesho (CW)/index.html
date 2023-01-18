@@ -11,277 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-<style>
-    * {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    /* Css for navbar */
-    .navbar {
-        display: flex;
-        /* border: 1px solid red; */
-    }
-
-    .navbar>div {
-        display: flex;
-        align-items: center;
-    }
-
-    /* for search bar */
-    .navbar>div:nth-child(2) {
-        margin-left: 2%;
-        width: 28%;
-        align-items: center;
-        border: 1px solid gray;
-    }
-
-    .navbar input {
-        width: 100%;
-        padding: 1%;
-        padding-left: 2%;
-        /* margin-top: 5%; */
-        font-size: medium;
-        /* color: red; */
-        border: none;
-    }
-
-    .navbar input::placeholder {
-        color: rgb(146, 144, 144);
-    }
-
-    .logo {
-        display: block;
-        width: 20px;
-        margin: auto;
-    }
-
-    .cartLogo {
-        display: block;
-        width: 25px;
-        margin: auto;
-    }
-
-    .search {
-        width: 20px;
-        height: 20px;
-        margin-left: 2%;
-    }
-
-    .no-outline:focus {
-        outline: none;
-        color: black;
-    }
-
-    /* For right part of navbar */
-    .navbar>div:nth-child(3) {
-        margin-left: 12%;
-        width: 50%;
-        /* border: 1px solid yellow; */
-    }
-
-    .navbar>div:nth-child(3)>div {
-        width: 100%;
-        font-size: 16px;
-        text-align: center;
-        align-items: center;
-    }
-
-    .app {
-        display: flex;
-        border-right: 2px solid rgb(199, 197, 197);
-        width: 150%;
-    }
-
-    .app span {
-        margin: 5%;
-    }
-
-    .supplier {
-        border-right: 2px solid rgb(199, 197, 197);
-        padding: 1.2%;
-    }
-
-    hr {
-        height: 1px;
-        background-color: #ccc;
-        border: none;
-    }
-
-    /* Css for the colection part */
-    .catlog {
-        display: flex;
-        justify-content: space-between;
-        padding: 0.5%;
-    }
-
-    /* CSS for the center part */
-    .center {
-        border: 1px solid red;
-        width: 80%;
-        margin: auto;
-    }
-
-    .center>div:first-child {
-        display: flex;
-        justify-content: center;
-        margin-top: 5%;
-        width: 100%;
-    }
-
-    .heading {
-        background-color: rgb(249, 249, 249);
-        width: 100%;
-        padding: 5%;
-        padding-top: 0.1%;
-        padding-bottom: 0.1%;
-
-    }
-
-    .heading h1 {
-        font-size: 48px;
-    }
-
-    .heading~div {
-        width: 100%;
-    }
-
-    .heading~div>img {
-        width: 100%;
-    }
-
-    .icons {
-        background-color: rgb(247, 168, 202);
-        border-radius: 55%;
-        width: 32px;
-        padding: 1% 0.5% 1% 0.5%;
-    }
-
-    .service {
-        /* border: 1px solid saddlebrown; */
-        display: flex;
-        background-color: white;
-        padding: 3%;
-        border-radius: 10px;
-        margin-top: -3%;
-    }
-
-    .service>div {
-        display: flex;
-        width: 100%;
-    }
-
-    .service span {
-        margin-left: 7%;
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 20px;
-        border-right: 1px solid black;
-        padding-right: 28%;
-    }
-    .service > div:nth-child(3) > span{
-        border: none;
-    }
-    .service ~ div{
-        background-color: rgb(244, 51, 151);
-        display: flex;
-        width: 60%;
-        padding: 2% 1%;
-        align-items: center;
-        color: white;
-        border-radius: 5px;
-        margin-top: 5%;
-        font-weight: bold;
-    }
-    .service ~ div > img{
-        margin-left: 8%;
-    }
-    .service ~ div > span{
-        margin-left: 5%;
-    }
-    .middle{
-        display: flex;
-        align-items: center;
-    }
-    .middle > hr:first-child{
-        margin-left: 0px;
-        justify-self: start;
-        width: 26%;
-        height: 1px;
-        background-color: rgb(244, 51, 151);
-        border: none;
-    }
-    .middle > hr:nth-child(3){
-        width: 26%;
-        justify-self: end;
-        margin-right: 0%;
-        height: 1px;
-        background-color: rgb(244, 51, 151);
-        border: none;
-    }
-    /* Css for fashionStore part*/
-    .fashionStore{
-        display: flex;
-        background-image: url("https://images.meesho.com/images/marketing/1649759774600.jpg");
-        padding: 9% 1% 2% 2%;
-    }
-    .fashionStore > div:nth-child(2){
-        display: flex;
-        width: 90%;
-        margin-top: 13.3%;
-        padding-left: 1.5%;
-    }
-    .fashionStore > div:nth-child(2) > img{
-        margin-right: 2%;
-        width: 48%;
-    }
-    
-    /* css for essential banner */
-    .essential{
-        display: flex;
-        margin-top: 5%;
-        background-image: url("https://images.meesho.com/images/marketing/1664343269674.jpg");
-        padding: 8%;
-    }
-    .essential > div > button{
-        border-radius: 5px;
-        background-color: black;
-        color: white;
-        padding: 1.2% 2%;
-        font-size: larger;
-        width: 45%;
-        height: 15%;
-        margin-top: 51%;
-        margin-left: 16%;
-
-    }
-    .essential > div:first-child{
-        display: flex;
-        margin-left: 0%;
-        text-align: center;
-        width: 50%;
-        margin-top: -1%;
-    }
-    .essential > div:nth-child(2){
-        display: flex;
-        margin-left: 0%;
-        text-align: center;
-        width: 100%;
-        margin-top: -1%;
-    }
-    .essential >div > div > img{
-        width: 95%;
-        height: 300px;
-        margin-right: 20%;
-    }
-    .essential > div > div > button{
-        background-color:  white;
-        color: #059862;
-        padding: 6% 18%;
-        font-size: larger;
-        border: none;
-        font-weight: bolder;
-    }
-</style>
+<link rel="stylesheet" href="index.css">
 
 <body>
     <div class="navbar">
@@ -309,7 +39,7 @@
     </div>
     <hr>
     <div class="catlog">
-        <div>Women Ethnic</div>
+        <div class="box">Women Ethnic</div>
         <div>Women Western</div>
         <div>Men</div>
         <div>Kids</div>
@@ -349,8 +79,9 @@
         </div>
         <div class="middle">
             <hr>
-            <h1 style="">Top Categories to choose from</h1>
-        <hr></div>
+            <h1>Top Categories to choose from</h1>
+            <hr>
+        </div>
         <div class="fashionStore">
             <div>
                 <img src="https://images.meesho.com/images/marketing/1649760442043.webp" alt="women">
@@ -367,12 +98,101 @@
                     <button>Beauty</button>
                 </div>
                 <div><img src="https://images.meesho.com/images/marketing/1649760703179.webp">
-                <button>Home</button></div>
+                    <button>Home</button>
+                </div>
                 <div><img src="https://images.meesho.com/images/marketing/1649760786763.webp">
-                <button>Electronics</button></div>
+                    <button>Electronics</button>
+                </div>
             </div>
+        </div>
+        <div class="banner4">
+            <h4>Become a Reseller and
+            </h4>
+            <h1>Start your Online Business <br>
+                with Zero Investment</h1>
+            <div><img src="https://images.meesho.com/images/pow/playstoreIcon.webp" alt="playstore"><img
+                    src="https://images.meesho.com/images/pow/appstoreIcon.webp" alt="apple"></div>
+        </div>
+        <div class="banner5">
+            <h1>Register as a Meesho Supplier</h1>
+            <p>Sell your products to crores of customers at 0% commission</p>
+            <div>
+                <div>
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjEiIHZpZXdCb3g9IjAgMCAyMCAyMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wIDEwLjVDMCA0Ljk4IDQuNDggMC41IDEwIDAuNUMxNS41MiAwLjUgMjAgNC45OCAyMCAxMC41QzIwIDE2LjAyIDE1LjUyIDIwLjUgMTAgMjAuNUM0LjQ4IDIwLjUgMCAxNi4wMiAwIDEwLjVaTTcuMjgyODggMTQuNzkyNUM3LjY3Mjg4IDE1LjE4MjUgOC4zMDI4OCAxNS4xODI1IDguNjkyODggMTQuNzkyNUwxNi4yNzI5IDcuMjAyNUMxNi42NjI5IDYuODEyNSAxNi42NjI5IDYuMTgyNSAxNi4yNzI5IDUuNzkyNUMxNS44ODI5IDUuNDAyNSAxNS4yNTI5IDUuNDAyNSAxNC44NjI5IDUuNzkyNUw3Ljk4Mjg4IDEyLjY3MjVMNS4xMDI4OCA5Ljc5MjVDNC43MTI4OCA5LjQwMjUgNC4wODI4OCA5LjQwMjUgMy42OTI4OCA5Ljc5MjVDMy41MDU2MiA5Ljk3OTMzIDMuNDAwMzkgMTAuMjMzIDMuNDAwMzkgMTAuNDk3NUMzLjQwMDM5IDEwLjc2MiAzLjUwNTYyIDExLjAxNTcgMy42OTI4OCAxMS4yMDI1TDcuMjgyODggMTQuNzkyNVoiIGZpbGw9IiMwNkE3NTkiLz4KPC9zdmc+Cg=="
+                        alt="tick">
+                    <span>Grow your business 10x</span>
+                </div>
+                <div>
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjEiIHZpZXdCb3g9IjAgMCAyMCAyMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wIDEwLjVDMCA0Ljk4IDQuNDggMC41IDEwIDAuNUMxNS41MiAwLjUgMjAgNC45OCAyMCAxMC41QzIwIDE2LjAyIDE1LjUyIDIwLjUgMTAgMjAuNUM0LjQ4IDIwLjUgMCAxNi4wMiAwIDEwLjVaTTcuMjgyODggMTQuNzkyNUM3LjY3Mjg4IDE1LjE4MjUgOC4zMDI4OCAxNS4xODI1IDguNjkyODggMTQuNzkyNUwxNi4yNzI5IDcuMjAyNUMxNi42NjI5IDYuODEyNSAxNi42NjI5IDYuMTgyNSAxNi4yNzI5IDUuNzkyNUMxNS44ODI5IDUuNDAyNSAxNS4yNTI5IDUuNDAyNSAxNC44NjI5IDUuNzkyNUw3Ljk4Mjg4IDEyLjY3MjVMNS4xMDI4OCA5Ljc5MjVDNC43MTI4OCA5LjQwMjUgNC4wODI4OCA5LjQwMjUgMy42OTI4OCA5Ljc5MjVDMy41MDU2MiA5Ljk3OTMzIDMuNDAwMzkgMTAuMjMzIDMuNDAwMzkgMTAuNDk3NUMzLjQwMDM5IDEwLjc2MiAzLjUwNTYyIDExLjAxNTcgMy42OTI4OCAxMS4yMDI1TDcuMjgyODggMTQuNzkyNVoiIGZpbGw9IiMwNkE3NTkiLz4KPC9zdmc+Cg=="
+                        alt="tick">
+                    <span>Enjoy 100% Profit</span>
+                </div>
+                <div>
+                    <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjEiIHZpZXdCb3g9IjAgMCAyMCAyMSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0wIDEwLjVDMCA0Ljk4IDQuNDggMC41IDEwIDAuNUMxNS41MiAwLjUgMjAgNC45OCAyMCAxMC41QzIwIDE2LjAyIDE1LjUyIDIwLjUgMTAgMjAuNUM0LjQ4IDIwLjUgMCAxNi4wMiAwIDEwLjVaTTcuMjgyODggMTQuNzkyNUM3LjY3Mjg4IDE1LjE4MjUgOC4zMDI4OCAxNS4xODI1IDguNjkyODggMTQuNzkyNUwxNi4yNzI5IDcuMjAyNUMxNi42NjI5IDYuODEyNSAxNi42NjI5IDYuMTgyNSAxNi4yNzI5IDUuNzkyNUMxNS44ODI5IDUuNDAyNSAxNS4yNTI5IDUuNDAyNSAxNC44NjI5IDUuNzkyNUw3Ljk4Mjg4IDEyLjY3MjVMNS4xMDI4OCA5Ljc5MjVDNC43MTI4OCA5LjQwMjUgNC4wODI4OCA5LjQwMjUgMy42OTI4OCA5Ljc5MjVDMy41MDU2MiA5Ljk3OTMzIDMuNDAwMzkgMTAuMjMzIDMuNDAwMzkgMTAuNDk3NUMzLjQwMDM5IDEwLjc2MiAzLjUwNTYyIDExLjAxNTcgMy42OTI4OCAxMS4yMDI1TDcuMjgyODggMTQuNzkyNVoiIGZpbGw9IiMwNkE3NTkiLz4KPC9zdmc+Cg=="
+                        alt="tick">
+                    <span>Sell all over India</span>
+                </div>
+            </div>
+            <button>Sign up <br>now</button>
+        </div>
+    </div>
+    <div class="section1">
+        <div>
+            <select name="products" id="sortby">
+                <option value="relevance">Sort by:Relevance</option>
+                <option value="high">Price(High to Low)</option>
+                <option value="low">Price(Low to High)</option>
+            </select>
+        </div>
+        <div class="products">
+
         </div>
     </div>
 </body>
+<script>
+    let container = document.querySelector(".products");
+    const api = "https://fakestoreapi.com/products";
 
+    async function fetchProduct(){
+        let req = await fetch(api);
+        let data = await req.json();
+        console.log(data);
+        // console.log(data[1].title)
+        display(data);
+    }
+    fetchProduct();
+
+    function display(data) {
+        container.innerHTML = "";
+        data.forEach((element) => {
+            let card = document.createElement("div");
+
+            let image = document.createElement("img");
+            let title = document.createElement("p");
+            let details = document.createElement("p");
+            let price = document.createElement("h3");
+            let free = document.createElement("p");
+            let ratingCard = document.createElement("div");
+            let ratings = document.createElement("span");
+            let reviews = document.createElement("span");
+            let star = document.createElement("img");
+            let add_to_cart = document.createElement("button");
+            image.setAttribute("src",element.image);
+            star.setAttribute("src","")
+            
+            title.innerText = "Product" + element.id;
+            price.innerText = "₹ " + element.price;
+            details.innerText = element.description;
+            ratings.innerText = element.rating.rate + " ✰";
+            reviews.innerText = element.rating.count + " reviews";
+            add_to_cart.innerText = "Add to Cart";
+            free.innerText = "Free Delivery";
+            ratings.setAttribute("id","rating");
+            
+            ratingCard.append(ratings,reviews);
+            card.append(image,title,price,free,ratingCard,add_to_cart);
+            container.append(card);
+        });
+    }
+</script>
 </html>
