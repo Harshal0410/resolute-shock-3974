@@ -1,0 +1,440 @@
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Css for navbar */
+.navbar {
+    display: flex;
+    /* border: 1px solid red; */
+}
+
+.navbar>div {
+    display: flex;
+    align-items: center;
+}
+
+/* for search bar */
+.navbar>div:nth-child(2) {
+    margin-left: 2%;
+    width: 28%;
+    align-items: center;
+    border: 1px solid gray;
+}
+
+.navbar input {
+    width: 100%;
+    padding: 1%;
+    padding-left: 2%;
+    /* margin-top: 5%; */
+    font-size: medium;
+    /* color: red; */
+    border: none;
+}
+
+.navbar input::placeholder {
+    color: rgb(146, 144, 144);
+}
+
+.logo {
+    display: block;
+    width: 20px;
+    margin: auto;
+}
+
+.cartLogo {
+    display: block;
+    width: 25px;
+    margin: auto;
+}
+
+.search {
+    width: 20px;
+    height: 20px;
+    margin-left: 2%;
+}
+
+.no-outline:focus {
+    outline: none;
+    color: black;
+}
+
+/* For right part of navbar */
+.navbar>div:nth-child(3) {
+    margin-left: 12%;
+    width: 50%;
+    /* border: 1px solid yellow; */
+}
+
+.navbar>div:nth-child(3)>div {
+    width: 100%;
+    font-size: 16px;
+    text-align: center;
+    align-items: center;
+}
+
+.app {
+    display: flex;
+    border-right: 2px solid rgb(199, 197, 197);
+    width: 150%;
+}
+
+.app span {
+    margin: 5%;
+}
+
+.supplier {
+    border-right: 2px solid rgb(199, 197, 197);
+    padding: 1.2%;
+}
+
+hr {
+    height: 1px;
+    background-color: #ccc;
+    border: none;
+}
+
+/* Css for the colection part */
+.catlog {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5%;
+}
+
+/* CSS for the center part */
+.center {
+    width: 80%;
+    margin: auto;
+}
+
+.center>div:first-child {
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+    width: 100%;
+}
+
+.heading {
+    background-color: rgb(249, 249, 249);
+    width: 100%;
+    padding: 5%;
+    padding-top: 0.1%;
+    padding-bottom: 0.1%;
+
+}
+
+.heading h1 {
+    font-size: 48px;
+}
+
+.heading~div {
+    width: 100%;
+}
+
+.heading~div>img {
+    width: 100%;
+}
+
+.icons {
+    background-color: rgb(247, 168, 202);
+    border-radius: 55%;
+    width: 32px;
+    padding: 1% 0.5% 1% 0.5%;
+}
+
+.service {
+    display: flex;
+    background-color: white;
+    padding: 3%;
+    border-radius: 10px;
+    margin-top: -3%;
+}
+
+.service>div {
+    display: flex;
+    width: 100%;
+}
+
+.service span {
+    margin-left: 7%;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    border-right: 1px solid black;
+    padding-right: 28%;
+}
+.service > div:nth-child(3) > span{
+    border: none;
+}
+.service ~ div{
+    background-color: rgb(244, 51, 151);
+    display: flex;
+    width: 60%;
+    padding: 2% 1%;
+    align-items: center;
+    color: white;
+    border-radius: 5px;
+    margin-top: 5%;
+    font-weight: bold;
+}
+.service ~ div > img{
+    margin-left: 8%;
+}
+.service ~ div > span{
+    margin-left: 5%;
+}
+.middle{
+    display: flex;
+    align-items: center;
+}
+.middle > hr:first-child{
+    margin-left: 0px;
+    justify-self: start;
+    width: 26%;
+    height: 1px;
+    background-color: rgb(244, 51, 151);
+    border: none;
+}
+.middle > hr:nth-child(3){
+    width: 26%;
+    justify-self: end;
+    margin-right: 0%;
+    height: 1px;
+    background-color: rgb(244, 51, 151);
+    border: none;
+}
+/* Css for fashionStore part*/
+.fashionStore{
+    display: flex;
+    background-image: url("https://images.meesho.com/images/marketing/1649759774600.jpg");
+    padding: 9% 1% 2% 2%;
+}
+.fashionStore > div:nth-child(2){
+    display: flex;
+    width: 90%;
+    margin-top: 13.3%;
+    padding-left: 1.5%;
+}
+.fashionStore > div:nth-child(2):hover{
+    cursor: pointer;
+}
+.fashionStore > div:nth-child(2) > img{
+    margin-right: 2%;
+    width: 48%;
+}
+.fashionStore > div:nth-child(1) > img:hover{
+    cursor: pointer;
+}
+
+/* css for essential banner */
+.essential{
+    display: flex;
+    margin-top: 5%;
+    background-image: url("https://images.meesho.com/images/marketing/1664343269674.jpg");
+    padding: 8%;
+}
+.essential > div > button{
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    padding: 1.2% 2%;
+    font-size: larger;
+    width: 45%;
+    height: 15%;
+    margin-top: 51%;
+    margin-left: 16%;
+
+}
+.essential > div > button:hover{
+    cursor: pointer;
+}
+.essential > div:first-child{
+    display: flex;
+    margin-left: 0%;
+    text-align: center;
+    width: 50%;
+    margin-top: -1%;
+}
+.essential > div:nth-child(2){
+    display: flex;
+    margin-left: 0%;
+    text-align: center;
+    width: 100%;
+    margin-top: -1%;
+}
+.essential >div > div > img{
+    width: 95%;
+    height: 300px;
+    margin-right: 20%;
+}
+.essential >div > div > img:hover{
+    cursor: pointer;
+}
+.essential > div > div > button{
+    background-color:  white;
+    color: #059862;
+    padding: 6% 18%;
+    font-size: larger;
+    border: none;
+    font-weight: bolder;
+}
+.essential > div > div > button:hover{
+    cursor: pointer;
+}
+/* css for 4th banner */
+.banner4{
+    margin-top: 5%;
+    background-image: url("https://images.meesho.com/images/pow/downloadBannerDesktop.webp");
+    text-align: right;
+    padding: 3% 5% 20% 5%;
+}
+.banner4 > div{
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+.banner4 > div > img{
+    width: 18%;
+    margin-right: 2%;
+    border-radius: 3px;
+}
+.banner4 > div > img:hover{
+    cursor: pointer;
+}
+.banner4 h4{
+    color: rgb(85, 133, 248);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    margin-bottom: -1%;
+}
+.banner4 h1{
+    color: rgb(244, 51, 151);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 46px;
+    /* line-height: 52px; */
+}
+
+/* CSS for banner5 */
+.banner5{
+    margin-top: 5%;
+    background-image: url("https://images.meesho.com/images/pow/supplyBannerDesktop.webp");
+    padding: 2% 5% 2% 5%;
+    color: white;
+    border-radius: 5px;
+}
+.banner5:hover{
+    cursor: pointer;
+}
+.banner5 > div{
+    width: 70%;
+    display: flex;
+   
+}
+.banner5 > div > div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.banner5 > div > div > span{
+    margin-left: 0%;
+    font-weight: bold;
+}
+.banner5 > div > div:first-child{
+    border-right: 1px solid white;
+    padding-right: 3%;
+}
+.banner5 > div > div:nth-child(2){
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.banner5 > div > div:nth-child(2){
+    border-right: 1px solid white;
+}
+.banner5 > div > div > img{
+    margin-right: 2%;
+}
+.banner5 button{
+    margin-top: 5%;
+    color: rgb(244, 51, 151);
+    font-weight: 600;
+    font-size: 18px;
+    padding: 1% 7%;
+    text-align: left;
+    padding-left: 2%;
+    border-radius: 8px;
+}
+/* sort */
+#sortby{
+    list-style-type: none;
+    margin: 0px;
+    padding: 8px 24px;
+    overflow: hidden;
+    border: 1px solid rgb(240, 240, 240);
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 5%;
+    width: 17%;
+    margin-right: 5%;
+    display: inline;
+}
+
+/* CSS for product div */
+/* .section1{
+    display: in;
+} */
+.products{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,17%);
+    gap: 0.5%;
+    justify-content: end;
+    margin: auto;
+    margin-top: -2.5%;
+    margin-left: 18%;
+    
+}
+.products p{
+    /* white-space: nowrap; */
+    /* overflow: hidden; */
+    /* text-overflow: ellipsis; */
+    color: rgb(153, 153, 153);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    
+}
+.products > div{
+    padding: 4%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+}
+.products img{
+    width: 80%;
+    height: 45%;
+}
+.products button{
+    width: 100%;
+    background-color:rgb(244, 51, 151);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    padding: 4% 5%;
+    margin-top: 5%;
+}
+.products button:hover{
+    cursor: pointer;
+}
+#rating{
+    background-color: #059862;
+    padding: 2% 5%;
+    border-radius: 15px;
+    margin-right: 2%;
+    color: white;
+    font-weight: bold;
+}
