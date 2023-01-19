@@ -1,9 +1,48 @@
+/* css for dropdown box */
+.dropBtn {
+    background-color: white;
+    font-size: 16px;
+    border: none;
+}
+
+.box {
+    position: relative;
+    display: inline-block;
+}
+
+.dropContent {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+}
+
+.dropContent a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropContent a:hover {
+    background-color: #ddd;
+}
+
+.box:hover .dropContent {
+    display: block;
+}
+
 
 * {
     font-family: 'Roboto', sans-serif;
 }
 
 /* Css for navbar */
+.nav{
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
 .navbar {
     display: flex;
     /* border: 1px solid red; */
@@ -21,9 +60,12 @@
     align-items: center;
     border: 1px solid gray;
 }
-
+.navbar form{
+    width: 90%;
+    border-right: 1px solid black;
+}
 .navbar input {
-    width: 100%;
+    width: 98%;
     padding: 1%;
     padding-left: 2%;
     /* margin-top: 5%; */
@@ -72,7 +114,9 @@
     text-align: center;
     align-items: center;
 }
-
+.rightProfile{
+    text-decoration: none;
+}
 .app {
     display: flex;
     border-right: 2px solid rgb(199, 197, 197);
@@ -163,10 +207,12 @@ hr {
     border-right: 1px solid black;
     padding-right: 28%;
 }
-.service > div:nth-child(3) > span{
+
+.service>div:nth-child(3)>span {
     border: none;
 }
-.service ~ div{
+
+.service~div {
     background-color: rgb(244, 51, 151);
     display: flex;
     width: 60%;
@@ -177,17 +223,21 @@ hr {
     margin-top: 5%;
     font-weight: bold;
 }
-.service ~ div > img{
+
+.service~div>img {
     margin-left: 8%;
 }
-.service ~ div > span{
+
+.service~div>span {
     margin-left: 5%;
 }
-.middle{
+
+.middle {
     display: flex;
     align-items: center;
 }
-.middle > hr:first-child{
+
+.middle>hr:first-child {
     margin-left: 0px;
     justify-self: start;
     width: 26%;
@@ -195,7 +245,8 @@ hr {
     background-color: rgb(244, 51, 151);
     border: none;
 }
-.middle > hr:nth-child(3){
+
+.middle>hr:nth-child(3) {
     width: 26%;
     justify-self: end;
     margin-right: 0%;
@@ -203,37 +254,43 @@ hr {
     background-color: rgb(244, 51, 151);
     border: none;
 }
+
 /* Css for fashionStore part*/
-.fashionStore{
+.fashionStore {
     display: flex;
     background-image: url("https://images.meesho.com/images/marketing/1649759774600.jpg");
     padding: 9% 1% 2% 2%;
 }
-.fashionStore > div:nth-child(2){
+
+.fashionStore>div:nth-child(2) {
     display: flex;
     width: 90%;
     margin-top: 13.3%;
     padding-left: 1.5%;
 }
-.fashionStore > div:nth-child(2):hover{
+
+.fashionStore>div:nth-child(2):hover {
     cursor: pointer;
 }
-.fashionStore > div:nth-child(2) > img{
+
+.fashionStore>div:nth-child(2)>img {
     margin-right: 2%;
     width: 48%;
 }
-.fashionStore > div:nth-child(1) > img:hover{
+
+.fashionStore>div:nth-child(1)>img:hover {
     cursor: pointer;
 }
 
 /* css for essential banner */
-.essential{
+.essential {
     display: flex;
     margin-top: 5%;
     background-image: url("https://images.meesho.com/images/marketing/1664343269674.jpg");
     padding: 8%;
 }
-.essential > div > button{
+
+.essential>div>button {
     border-radius: 5px;
     background-color: black;
     color: white;
@@ -245,70 +302,83 @@ hr {
     margin-left: 16%;
 
 }
-.essential > div > button:hover{
+
+.essential>div>button:hover {
     cursor: pointer;
 }
-.essential > div:first-child{
+
+.essential>div:first-child {
     display: flex;
     margin-left: 0%;
     text-align: center;
     width: 50%;
     margin-top: -1%;
 }
-.essential > div:nth-child(2){
+
+.essential>div:nth-child(2) {
     display: flex;
     margin-left: 0%;
     text-align: center;
     width: 100%;
     margin-top: -1%;
 }
-.essential >div > div > img{
+
+.essential>div>div>img {
     width: 95%;
     height: 300px;
     margin-right: 20%;
 }
-.essential >div > div > img:hover{
+
+.essential>div>div>img:hover {
     cursor: pointer;
 }
-.essential > div > div > button{
-    background-color:  white;
+
+.essential>div>div>button {
+    background-color: white;
     color: #059862;
     padding: 6% 18%;
     font-size: larger;
     border: none;
     font-weight: bolder;
 }
-.essential > div > div > button:hover{
+
+.essential>div>div>button:hover {
     cursor: pointer;
 }
+
 /* css for 4th banner */
-.banner4{
+.banner4 {
     margin-top: 5%;
     background-image: url("https://images.meesho.com/images/pow/downloadBannerDesktop.webp");
     text-align: right;
     padding: 3% 5% 20% 5%;
 }
-.banner4 > div{
+
+.banner4>div {
     width: 100%;
     display: flex;
     justify-content: right;
 }
-.banner4 > div > img{
+
+.banner4>div>img {
     width: 18%;
     margin-right: 2%;
     border-radius: 3px;
 }
-.banner4 > div > img:hover{
+
+.banner4>div>img:hover {
     cursor: pointer;
 }
-.banner4 h4{
+
+.banner4 h4 {
     color: rgb(85, 133, 248);
     font-style: normal;
     font-weight: 700;
     font-size: 30px;
     margin-bottom: -1%;
 }
-.banner4 h1{
+
+.banner4 h1 {
     color: rgb(244, 51, 151);
     font-style: normal;
     font-weight: 700;
@@ -317,45 +387,54 @@ hr {
 }
 
 /* CSS for banner5 */
-.banner5{
+.banner5 {
     margin-top: 5%;
     background-image: url("https://images.meesho.com/images/pow/supplyBannerDesktop.webp");
     padding: 2% 5% 2% 5%;
     color: white;
     border-radius: 5px;
 }
-.banner5:hover{
+
+.banner5:hover {
     cursor: pointer;
 }
-.banner5 > div{
+
+.banner5>div {
     width: 70%;
     display: flex;
-   
+
 }
-.banner5 > div > div{
+
+.banner5>div>div {
     width: 100%;
     display: flex;
     align-items: center;
 }
-.banner5 > div > div > span{
+
+.banner5>div>div>span {
     margin-left: 0%;
     font-weight: bold;
 }
-.banner5 > div > div:first-child{
+
+.banner5>div>div:first-child {
     border-right: 1px solid white;
     padding-right: 3%;
 }
-.banner5 > div > div:nth-child(2){
+
+.banner5>div>div:nth-child(2) {
     margin-left: 5%;
     margin-right: 5%;
 }
-.banner5 > div > div:nth-child(2){
+
+.banner5>div>div:nth-child(2) {
     border-right: 1px solid white;
 }
-.banner5 > div > div > img{
+
+.banner5>div>div>img {
     margin-right: 2%;
 }
-.banner5 button{
+
+.banner5 button {
     margin-top: 5%;
     color: rgb(244, 51, 151);
     font-weight: 600;
@@ -365,8 +444,9 @@ hr {
     padding-left: 2%;
     border-radius: 8px;
 }
+
 /* sort */
-#sortby{
+#sortby {
     list-style-type: none;
     margin: 0px;
     padding: 8px 24px;
@@ -384,19 +464,20 @@ hr {
 /* .section1{
     display: in;
 } */
-.products{
+.products {
     width: 80%;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(5,17%);
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: repeat(5, 17%); */
     gap: 0.5%;
     justify-content: end;
     margin: auto;
     margin-top: -2.5%;
     margin-left: 18%;
-    
+
 }
-.products p{
+
+.products p {
     /* white-space: nowrap; */
     /* overflow: hidden; */
     /* text-overflow: ellipsis; */
@@ -407,30 +488,35 @@ hr {
     line-height: 20px;
     text-overflow: ellipsis;
     overflow: hidden;
-    
 }
-.products > div{
+
+.products>div {
     padding: 4%;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; 
+    overflow: visible;
 
 }
-.products img{
+
+.products img {
     width: 80%;
     height: 45%;
 }
-.products button{
+
+.products button {
     width: 100%;
-    background-color:rgb(244, 51, 151);
+    background-color: rgb(244, 51, 151);
     color: white;
     border: none;
     border-radius: 3px;
     padding: 4% 5%;
     margin-top: 5%;
 }
-.products button:hover{
+
+.products button:hover {
     cursor: pointer;
 }
-#rating{
+
+#rating {
     background-color: #059862;
     padding: 2% 5%;
     border-radius: 15px;

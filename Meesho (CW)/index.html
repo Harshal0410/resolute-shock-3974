@@ -14,42 +14,106 @@
 <link rel="stylesheet" href="index.css">
 
 <body>
-    <div class="navbar">
-        <div><img src="meesho logo.png" alt="meesho"></div>
-        <div><img src="./search icon.png" alt="search" class="search">
-            <input type="text" placeholder="Try Sarre,Kurti or Search by Product Code" class="no-outline">
-        </div>
-        <div>
-            <div class="app">
-                <img src="./mobile icon.png" alt="">
-                <span>Download App</span>
-            </div>
-            <div class="supplier">
-                <span>Become a Supplier</span>
+    <div class="nav">
+        <div class="navbar">
+            <div><img src="meesho logo.png" alt="meesho"></div>
+            <div><img src="./search icon.png" alt="search" class="search">
+                <form> <input type="text" placeholder="Try Sarre,Kurti or Search by Product Code" class="no-outline"
+                        id="search"></form>
             </div>
             <div>
-                <img src="/avatar.png" alt="" class="logo">
-                <span class="rightProfile">Profile</span>
-            </div>
-            <div>
-                <img src="https://img.icons8.com/windows/2x/shopping-cart.png " alt="" class="cartLogo">
-                <span class="rightProfile">Cart</span>
+                <div class="app">
+                    <img src="./mobile icon.png" alt="">
+                    <span>Download App</span>
+                </div>
+                <div class="supplier">
+                    <span>Become a Supplier</span>
+                </div>
+                <div>
+                    <img src="/avatar.png" alt="" class="logo">
+                    <span class="rightProfile">Profile</span>
+                </div>
+                <div>
+                    <img src="https://img.icons8.com/windows/2x/shopping-cart.png " alt="" class="cartLogo">
+                        <a href="./cart.html" class="rightProfile">Cart</a>
+                </div>
             </div>
         </div>
+        <hr>
+        <div class="catlog">
+            <div class="box">
+                <button class="dropBtn">Women Ethnic</button>
+                <div class="dropContent">
+                    <a href="#">View All</a><a href="#">All Sarees</a>
+                </div>
+            </div>
+            <div>
+                <div class="box">
+                    <button class="dropBtn">Women Western</button>
+                    <div class="dropContent">
+                        <a href="#">Tops</a><a href="#">Dresses</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="box">
+                    <button class="dropBtn">Men</button>
+                    <div class="dropContent">
+                        <a href="#">T-shirt</a><a href="#">Sweat-Shirt</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="box">
+                    <button class="dropBtn">Kids</button>
+                    <div class="dropContent">
+                        <a href="#">Dresses</a><a href="#">Footwear</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="box">
+                    <button class="dropBtn">Home & Kitchen</button>
+                    <div class="dropContent">
+                        <a href="#">Home Furnishing</a><a href="#">Home Decor</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="box">
+                    <button class="dropBtn">Beauty & Health</button>
+                    <div class="dropContent">
+                        <a href="#">Make up</a><a href="#">Skin Care</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="box">
+                    <button class="dropBtn">Jewllery & accessories</button>
+                    <div class="dropContent">
+                        <a href="#">Rings</a><a href="#">Necklace</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="box">
+                    <button class="dropBtn">Bags & Footwear</button>
+                    <div class="dropContent">
+                        <a href="#">Men Footwear</a><a href="#">Women Footwear</a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="box">
+                    <button class="dropBtn">Electronics</button>
+                    <div class="dropContent">
+                        <a href="#">Tv</a><a href="#">Laptop</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
     </div>
-    <hr>
-    <div class="catlog">
-        <div class="box">Women Ethnic</div>
-        <div>Women Western</div>
-        <div>Men</div>
-        <div>Kids</div>
-        <div>Home & Kitchen</div>
-        <div>Beauty & Health</div>
-        <div>Jewllery & accessories</div>
-        <div>Bags & Footwear</div>
-        <div>Electronics</div>
-    </div>
-    <hr>
     <div class="center">
         <div>
             <div class="heading">
@@ -149,50 +213,6 @@
         </div>
     </div>
 </body>
-<script>
-    let container = document.querySelector(".products");
-    const api = "https://fakestoreapi.com/products";
+<script src="./scripts/index.js"></script>
 
-    async function fetchProduct(){
-        let req = await fetch(api);
-        let data = await req.json();
-        console.log(data);
-        // console.log(data[1].title)
-        display(data);
-    }
-    fetchProduct();
-
-    function display(data) {
-        container.innerHTML = "";
-        data.forEach((element) => {
-            let card = document.createElement("div");
-
-            let image = document.createElement("img");
-            let title = document.createElement("p");
-            let details = document.createElement("p");
-            let price = document.createElement("h3");
-            let free = document.createElement("p");
-            let ratingCard = document.createElement("div");
-            let ratings = document.createElement("span");
-            let reviews = document.createElement("span");
-            let star = document.createElement("img");
-            let add_to_cart = document.createElement("button");
-            image.setAttribute("src",element.image);
-            star.setAttribute("src","")
-            
-            title.innerText = "Product" + element.id;
-            price.innerText = "₹ " + element.price;
-            details.innerText = element.description;
-            ratings.innerText = element.rating.rate + " ✰";
-            reviews.innerText = element.rating.count + " reviews";
-            add_to_cart.innerText = "Add to Cart";
-            free.innerText = "Free Delivery";
-            ratings.setAttribute("id","rating");
-            
-            ratingCard.append(ratings,reviews);
-            card.append(image,title,price,free,ratingCard,add_to_cart);
-            container.append(card);
-        });
-    }
-</script>
 </html>
