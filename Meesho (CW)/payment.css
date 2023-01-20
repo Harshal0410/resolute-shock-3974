@@ -1,0 +1,71 @@
+.alpha{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    padding-top: 2%;
+}
+.card1{
+    width: 60%;
+    padding: 0% 2%;
+}
+.card1 img{
+    width: 100%;
+}
+.card2{
+    width: 40%;
+}
+.card1 h3{
+    display: inline;
+}
+.card1 > div > span{
+    font-size: small;
+    color: rgb(153, 153, 153);
+}
+.card1 > div:first-child{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card1 hr{
+    margin-top: -1.5%;
+    width: 75%;
+    margin-left: 17%;
+}
+
+/* card2 css */
+.card2{
+    padding: 0% 2%;
+    border-left: 1px solid rgb(153, 153, 153);
+    padding-bottom: 1%;
+}
+.card2 button{
+    width: 98%;
+    padding: 4%;
+    background-color: rgb(244, 51, 151);
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.card2 p{
+    font-size: small;
+    color: rgb(153, 153, 153);
+    text-align: center;
+}
+.card1 h3, .card2 h3{
+    margin-top: -0.7%;
+}
+.card2 > div >span:nth-child(2){
+    margin-left: 44%;
+    color: rgb(153, 153, 153);
+}
+.card2 > div >span:nth-child(1){
+    color: rgb(153, 153, 153);
+    font-size: 17px;
+}
+#order{
+    display: flex;
+    justify-content: space-between;
+}

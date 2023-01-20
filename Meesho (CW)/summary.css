@@ -1,4 +1,5 @@
 /* css for container */
+
 #home{
     cursor: pointer;
 }
@@ -43,7 +44,7 @@
 }
 .card2 button{
     width: 82%;
-    padding: 3%;
+    padding: 3.5% 3%;
     background-color: rgb(244, 51, 151);
     border: none;
     color: white;
@@ -67,15 +68,14 @@
     margin-left: 22%;
 }
 #top h3{
-    width: 4.8%;
-    font-weight: 500;
+    width: 100%;
+    font-weight: 600;
     margin-left: 0%;
     margin-right: 0%;
 }
 .col{
     color: rgb(102, 102, 102);
     padding-left: 1%;
-    border-left: 1px solid rgb(102, 102, 102);
 }
 
 .card1{
@@ -90,7 +90,6 @@
 }
 .card1 > div{
     display: flex;
-    /* border: 1px solid red; */
     margin-bottom: 3%;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
@@ -169,4 +168,26 @@
     background: rgb(255, 255, 255);
     border: 1px solid rgb(244, 51, 151);
     padding: 1% 2%;
+}
+
+/* css for address part */
+
+#card3{
+    display: block;
+    width: 35.9%;
+    margin-left: 22%;
+}
+#card3 > div{
+    padding: 3%;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    border-radius: 5px;
+}
+#card4{
+    display: block;
+    width: 35.9%;
+    margin-left: 22%;
+}
+
+#card4 img{
+    width: 100%;
 }

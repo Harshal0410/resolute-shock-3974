@@ -1,24 +1,9 @@
 let lsData = JSON.parse(localStorage.getItem("lsData")) || [];
+let address = JSON.parse(localStorage.getItem("address")) || [];
 let container = document.querySelector(".container");
 let card1 = document.querySelector(".card1");
-let to = document.querySelector("#top");
-let emptyCart = document.querySelector("#empty-cart");
-let viewProducts = document.querySelector("#empty-cart > button");
-
-console.log(lsData);
-let card2 = document.querySelector(".card2");
 let home = document.getElementById("home");
 home.addEventListener("click",()=>{
-    window.open("./index.html","_self");
-})
-if(lsData.length === 0){
-    container.style.display = "none";
-    card2.style.display = "none";
-    to.style.display = "none";
-    emptyCart.style.display = "block";
-
-}
-viewProducts.addEventListener("click",()=>{
     window.open("./index.html","_self");
 })
 
@@ -60,7 +45,6 @@ function display(data) {
         price.innerText = "₹ " + element.price;
         free.innerText = " Free Delivery";
         size.innerText = "Size:Free Size" + " ○Qty:1";
-        remove.innerText = "× REMOVE";
         category.innerText = "Category: " + element.category;
         end.append(category,free)
 
@@ -71,10 +55,7 @@ function display(data) {
         container.append(card1);
     });
 }
-localStorage.setItem("lsData",JSON.stringify(lsData));
-display(lsData)
-let items = document.getElementById("items");
-items.innerText = lsData.length + " Item"
+display(lsData);
 
 let total = document.querySelector(".total");
 let t = document.querySelector(".t");
@@ -92,3 +73,30 @@ let proceed = document.getElementById("continue");
 proceed.addEventListener("click",()=>{
     window.open("./address.html","_self")
 })
+
+function displayAddress(data) {
+    container.innerHTML = "";
+    data.forEach((element) => {
+        let name = createElement("h3");
+        let address = document.createElement("span");
+        let phoneNumber = document.createElement("p");
+
+        
+        name.innerText = element.name;
+        address.innerText = element.houseNo + element.street + element.city +  element.state + " - " + element.pincode;
+        phoneNumber.innerText = "+91 " + element.phoneNumber;
+        container.append(name,address,phoneNumber);
+        // container.append(card1);
+    });
+}
+// displayAddress(address);
+let myAddress = document.getElementById("address");
+let myName = document.createElement("h3");
+let add = document.createElement("span");
+let phoneNumber = document.createElement("p");
+
+myName.innerText = address[0].name;
+add.innerText = address[0].houseNo + ", " + address[0].street + ", " + address[0].city + ", " +  address[0].state + " - " +address[0].pincode;
+phoneNumber.innerText = "+91 " + address[0].phoneNumber;
+
+myAddress.append(myName,add,phoneNumber)
