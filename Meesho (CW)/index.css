@@ -1,4 +1,7 @@
 /* css for dropdown box */
+#home{
+    cursor: pointer;
+}
 .dropBtn {
     background-color: white;
     font-size: 16px;
@@ -8,6 +11,7 @@
 .box {
     position: relative;
     display: inline-block;
+    cursor: pointer;
 }
 
 .dropContent {
@@ -22,6 +26,7 @@
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    cursor: pointer;
 }
 
 .dropContent a:hover {
@@ -137,6 +142,9 @@ hr {
     background-color: #ccc;
     border: none;
 }
+#ca{
+    color: black;
+}
 
 /* Css for the colection part */
 .catlog {
@@ -222,6 +230,7 @@ hr {
     border-radius: 5px;
     margin-top: 5%;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .service~div>img {
@@ -461,9 +470,7 @@ hr {
 }
 
 /* CSS for product div */
-/* .section1{
-    display: in;
-} */
+
 .products {
     width: 80%;
     display: grid;
@@ -476,11 +483,15 @@ hr {
     margin-left: 18%;
 
 }
-
+.products > div{
+    display: flex;
+    flex-direction: column;
+}
+.products h4{
+    color: rgb(153, 153, 153);
+    line-height: 20px;
+}
 .products p {
-    /* white-space: nowrap; */
-    /* overflow: hidden; */
-    /* text-overflow: ellipsis; */
     color: rgb(153, 153, 153);
     font-style: normal;
     font-weight: 400;
@@ -488,6 +499,7 @@ hr {
     line-height: 20px;
     text-overflow: ellipsis;
     overflow: hidden;
+    margin-top: -2%;
 }
 
 .products>div {
@@ -509,11 +521,12 @@ hr {
     border: none;
     border-radius: 3px;
     padding: 4% 5%;
-    margin-top: 5%;
+    margin: auto;
 }
 
 .products button:hover {
     cursor: pointer;
+    background-color: rgb(245, 75, 163);
 }
 
 #rating {
@@ -524,3 +537,97 @@ hr {
     color: white;
     font-weight: bold;
 }
+.products h3{
+    margin-top: 0%;
+}
+
+/* footer design */
+
+.footer{
+    display: flex;
+    margin-top: 9%;
+    padding: 2% 0.5%;
+}
+#store{
+    display: flex;
+    width: 95%;
+    justify-content: space-between;
+}
+#store > img{
+    width: 48%;
+    cursor: pointer;
+}
+.footer > div:first-child{
+    width: 35%;
+}
+.footer > div:nth-child(2){
+    width: 20%;
+    text-align: center;
+}
+.footer > div:nth-child(3){
+    width: 20%;
+    text-align: center;
+}
+.footer > div:nth-child(3) > div{
+    display: flex;
+    justify-content: space-evenly;
+}
+.footer > div:nth-child(4){
+    width: 20%;
+    padding: 0% 2%;
+}
+.footer a{
+    display: block;
+    line-height: 40px;
+    text-decoration: none;
+    color: rgb(102, 102, 102);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+}
+.footer img{
+    cursor: pointer;
+}
+
+/* toast */
+#snackbar {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: rgb(245, 75, 163);
+    color: white;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+  }
+  
+  #snackbar.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+  }

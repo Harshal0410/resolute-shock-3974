@@ -1,43 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Address</title>
 </head>
-<link rel="stylesheet" href="signIn.css">
+<link rel="stylesheet" href="address.css">
+
 <body>
     <div class="navbar">
-        <div><img src="meesho logo.png" alt="meesho"></div>
+        <div><img src="meesho logo.png" alt="meesho" id="home"></div>
     </div>
     <hr>
-    <div class="center">
-        <button id="show-login">Login</button>
     </div>
-    <div class="popup">
-        <div class="closebtn">&times;</div>
-        <div class="form">
-            <h2>Log in</h2>
-            <dvi class="form-element">
-                <label for="email">Email</label>
-                <input type="email" placeholder="Enter your email here" id="email">
-            </dvi>
-            <div class="form-element">
-                <label for="password">Password</label>
-                <input type="password"  id="password" placeholder="Enter your password here">
-            </div>
-            <div class="form-element">
-                <input type="checkbox" id="remember-me">
-                <label for="remember-me">Remember me</label>
-            </div>
-            <div class="form-element">
-                <button>Sign in</button>
-            </div>
-            <div class="form-element">
-                <a href="#">Forgot Password</a>
+    <form>
+        <div class="popup">
+            <div class="form">
+                <h2>Add Address</h2>
+                <div class="form-element">
+                    <label for="name">Name</label>
+                    <input type="text" placeholder="Enter your name here" id="name">
+                </div>
+                <div class="form-element">
+                    <label for="number"> <span id="picon">📞</span> Phone Number</label>
+                    <input type="number" id="phone" placeholder="Enter your phone number here">
+                </div>
+                <div class="form-element">
+                    <label for="Address">Address</label>
+                    <input type="number" placeholder="House/building number" id="houseNo">
+                    <input type="text" placeholder="Road Name/Area/Colony" id="colony">
+                    <input type="number" placeholder="Pincode" id="pincode">
+                    <input type="text" placeholder="City" id="city">
+                    <input type="text" placeholder="State" id="state">
+                </div>
+                <div class="form-element">
+                    <button>Save Address & Continue</button>
+                </div>
             </div>
         </div>
-    </div>
+        </div>
+        </div>
+        </div>
+    </form>
+
 </body>
+<script src="./scripts/address.js"></script>
+
 </html>
