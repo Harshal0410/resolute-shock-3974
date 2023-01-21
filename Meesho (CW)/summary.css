@@ -1,3 +1,12 @@
+.navbar{
+    display: flex;
+}
+.navbar > div:nth-child(2){
+    display: block;
+    width: 70%;
+    text-align: center;
+}
+
 /* css for container */
 
 #home{
@@ -190,4 +199,12 @@
 
 #card4 img{
     width: 100%;
+}
+#continue{
+    display: block;
+    margin-bottom: 2%;    
+}
+#msg{
+    display: none;
+    color: green;
 }
