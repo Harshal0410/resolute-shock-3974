@@ -1,3 +1,12 @@
+.navbar{
+    display: flex;
+}
+.navbar > div:nth-child(2){
+    display: block;
+    width: 70%;
+    text-align: center;
+}
+
 .alpha{
     width: 70%;
     margin: auto;

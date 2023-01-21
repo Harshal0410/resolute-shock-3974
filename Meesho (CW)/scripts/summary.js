@@ -70,8 +70,9 @@ t.innerText = "₹ " + val;
 
 // continue button
 let proceed = document.getElementById("continue");
+let lable = document.querySelector("#msg");
 proceed.addEventListener("click",()=>{
-    window.open("./address.html","_self")
+    lable.style.display = "block";
 })
 
 function displayAddress(data) {

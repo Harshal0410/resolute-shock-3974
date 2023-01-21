@@ -1,9 +1,47 @@
 let container = document.querySelector(".products"); const api = "https://fakestoreapi.com/products";
+let loginData = JSON.parse(localStorage.getItem("userData")) || [];
+
 let searchbtn = document.querySelector(".navbar form");
 let myData = [];
 let cartdata = JSON.parse(localStorage.getItem("lsData")) || [];
 let sortby = document.getElementById("sortby");
 let home = document.getElementById("home");
+let profile = document.getElementById("profile");
+let profileName = document.getElementById("username");
+let no1 = document.getElementById("no1");
+let no2 = document.getElementById("no2");
+let cart = document.getElementById("ca");
+
+
+no2.addEventListener("click",()=>{
+    for(let i = 0;i<loginData.length;i++){
+        loginData[i].status = "false";
+        }
+        window.open("./signIn.html","_self");
+        localStorage.setItem("userData",JSON.stringify(loginData));
+        no2.style.display = "block";
+        window.close("./index.html");
+    }
+)
+cart.addEventListener("click",()=>{
+    if(loginData[0].status === "true"){
+        window.open("./cart.html","_self");
+    }
+})
+profileName.style.display = "none";
+if(loginData.length === 0){
+    no1.style.display = "block";
+}
+for(let i = 0;i<loginData.length;i++){
+    if(loginData[i].status === "true"){
+        profileName.innerText = loginData[i].name;
+        no2.style.display = "block";
+        profileName.style.display = "block"
+    }else{
+        no1.style.display = "block";
+    }
+}
+
 home.addEventListener("click",()=>{
     window.open("./index.html","_self");
 })
@@ -53,7 +91,7 @@ function display(data) {
                     cartdata.push(el);
                 }
             })
-            myFunction();
+            // myFunction();
             localStorage.setItem("lsData", JSON.stringify(cartdata));
         });
 
@@ -103,9 +141,3 @@ function mySort(data) {
         }
     })
 }
-
-function myFunction() {
-    var x = document.getElementById("snackbar");
-    x.className = "show";
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-  }
