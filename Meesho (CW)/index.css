@@ -1,3 +1,18 @@
+/* css for test */
+#toast{
+    min-width: 80px;
+    position: fixed;
+    bottom: 30px;
+    left: 45%;
+    background-color: black;
+    padding: 1%;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    font-size: medium;
+    visibility: hidden;
+}
+
 /* css for profile links */
 #no1, #no2{
     display: none;
@@ -60,12 +75,22 @@
 }
 .navbar {
     display: flex;
-    /* border: 1px solid red; */
 }
 
 .navbar>div {
     display: flex;
     align-items: center;
+    justify-content: space-around;
+}
+#avatar{
+    width: 60%;
+    display: block;
+    margin-left: 4%;
+}
+#avatar ~ div{
+    width: 60%;
+    display: block;
+    margin-right: 2%;
 }
 
 /* for search bar */
@@ -600,5 +625,104 @@ hr {
     cursor: pointer;
 }
 
+/* media queries */
+
+@media screen and (max-width:412px){
+    .products {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .app{
+        display: none;
+    }
+    .supplier{
+        display: none;
+    }
+    .center{
+        width: 80%;
+    }
+    #res1{
+        display: none;
+    }
+    .service > div{
+        width: 100%;
+    }
+    #sortby{
+        display: block;
+        width: 50%;
+        margin: 4% auto;
+    }
+    .catlog{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(4,50%);
+        height: max-content;
+        display: none;
+    }
+    .fashionStore{
+        width: 100%;
+    }
+    .fashionStore img{
+        width: 100%;
+    }
+    .fashionStore > div:nth-child(2){
+        display: none;
+    }
+    .essential {
+        display: none;
+    }
+    .banner4{
+        width: 100%;
+        text-align: center;
+    }
+    .banner4 img{
+        width: 100%;
+    }
+    .banner4 > div > img{
+        width: 50%;
+    }
+    .banner5{
+        width: 100%;
+    }
+    .banner5 > div{
+        width: 100%;
+    }
+    .icons {
+        background-color: rgb(247, 168, 202);
+        border-radius: 55%;
+        width: 30px;
+        padding: 1% 0.5% 1% 0.5%;
+    }
+    .service span{
+        border-right: none;
+        margin-right: 1%;
+    }
+
+    .meeshoapp{
+        width: 100%;
+        text-align: center;
+        display: block;
+        margin: auto;
+    }
+    .footer{
+        width: 100%;
+        margin-top: 250%;
+        display: block;
+        text-align: center;
+    }
+    .footer > div{
+        width: 1000%;
+        display: block;
+        margin: 5% auto;
+        width: 500px;
+    }
+    #first, #second,#third,#forth {
+        width: 100%;
+        padding: 1%;
+    }
+    #forth{
+        padding-left: 2%;
+        padding-right: 4%;
+    }
+}
  
   

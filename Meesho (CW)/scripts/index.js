@@ -11,6 +11,14 @@ let profileName = document.getElementById("username");
 let no1 = document.getElementById("no1");
 let no2 = document.getElementById("no2");
 let cart = document.getElementById("ca");
+let toast = document.getElementById("toast");
+
+function showToast(){
+    toast.style.visibility = "visible";
+    setTimeout(()=>{
+        toast.style.visibility = "hidden";
+    },1500)
+}
 
 
 no2.addEventListener("click",()=>{
@@ -93,6 +101,7 @@ function display(data) {
             })
             // myFunction();
             localStorage.setItem("lsData", JSON.stringify(cartdata));
+            showToast();
         });
 
 
@@ -102,6 +111,9 @@ function display(data) {
         ratingCard.append(ratings, reviews);
         card.append(image, title, price, free, ratingCard, add_to_cart);
         container.append(card);
+        setTimeout(()=>{
+            toast.style.visibility = "hidden";
+        },2000)
     });
 }
 
