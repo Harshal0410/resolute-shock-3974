@@ -1,5 +1,7 @@
 .navbar{
     display: flex;
+    margin-top: .05%;
+    margin-left: 2%;
 }
 .navbar > div:nth-child(2){
     display: block;
@@ -77,4 +79,38 @@
 #order{
     display: flex;
     justify-content: space-between;
+}
+
+@media screen and (max-width:412px){
+    .navbar{
+        display: block;
+        text-align: center;
+    }
+    .alpha{
+        display: block;
+    }
+    .card1{
+        width: 100%;
+        margin: auto;
+    }
+    .card2{
+        width: 100%;
+        text-align: center;
+        margin-top: 5%;
+        border-left: none;
+        border: 1px solid black;
+        padding: 5%;
+    }
+    .card2 > div{
+        width: 100%;
+    }
+    #one{
+        display: flex;
+        margin: auto;  
+        justify-content: space-between; 
+    }
+    .card2 > div >span:nth-child(2){
+        width: 25%;
+        margin-left: 0%;
+    }
 }

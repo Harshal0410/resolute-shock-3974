@@ -1,5 +1,7 @@
 .navbar{
     display: flex;
+    margin-left: 2%;
+    margin-top: .5%;
 }
 .navbar > div:nth-child(2){
     display: block;
@@ -93,4 +95,12 @@ body{
     color: #1a79ca;
     text-decoration: none;
     font-weight: 600;
+}
+
+
+@media screen and (max-width:412px){
+    .navbar{
+        display: block;
+        text-align: center;
+    }
 }

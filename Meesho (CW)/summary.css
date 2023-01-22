@@ -1,5 +1,7 @@
 .navbar{
     display: flex;
+    margin-top: .05%;
+    margin-left: 2%;
 }
 .navbar > div:nth-child(2){
     display: block;
@@ -207,4 +209,80 @@
 #msg{
     display: none;
     color: green;
+}
+
+@media screen and (max-width:412px){
+    .alpha{
+        display: block;
+    }
+    .container{
+        width: 100%;
+        margin: auto;
+    }
+    .navbar{
+        display: block;
+        text-align: center;
+    }
+    .card1{
+        width: 100%;
+        margin: auto;
+    }
+
+    #top{
+        display:flex;
+        width: 100%;
+        margin: auto;
+        justify-content: center;
+        align-items: center;
+        margin-top: 4%;
+    }
+    #top h3{
+        display: inline;
+        width: 18%;
+        text-align: right;
+        padding-right: 7%;
+    }
+    .card2{
+        width: 100%;
+        text-align: center;
+        margin-top: 5%;
+        border: 1px solid black;
+        padding: 5% 1%;
+    }
+    .card2 > div{
+        width: 100%;
+    }
+    #one{
+        width: 100%;
+        text-align: center;display: inline;
+    }
+    #two{
+        width: 100%;
+        display: inline;
+        font-size: medium;
+    }
+    #three{
+        display: flex;
+        justify-content: center;
+        margin-top: 3%;
+    }
+    #three lable{
+        display: block;
+    }
+    #two h3{
+        display: inline;
+    }
+    .card2 hr{
+        margin: 2% auto;
+    }
+    #card3{
+        width: 100%;
+        text-align: center;
+        margin: auto;
+    }
+    #card4{
+        width: 100%;
+        text-align: center;
+        margin: auto;
+    }
 }
