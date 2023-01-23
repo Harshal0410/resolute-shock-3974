@@ -5,6 +5,7 @@ let password = document.getElementById("password");
 let toast = document.getElementById("pop");
 
 let btn = document.getElementById("btn");
+
 btn.addEventListener("click",()=>{
     if(myName.value === "" || email.value === "" || password.value === ""){
         alert("All the boxes should be filled")
@@ -15,6 +16,4 @@ btn.addEventListener("click",()=>{
         loginData.push(obj);
         localStorage.setItem("userData",JSON.stringify(loginData));
     }
-   
-    
 })

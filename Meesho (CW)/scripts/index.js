@@ -28,12 +28,15 @@ no2.addEventListener("click",()=>{
         window.open("./signIn.html","_self");
         localStorage.setItem("userData",JSON.stringify(loginData));
         no2.style.display = "block";
-        window.close("./index.html");
+        // window.close("./index.html");
     }
 )
 cart.addEventListener("click",()=>{
-    if(loginData[0].status === "true"){
-        window.open("./cart.html","_self");
+    for(let i = 0;i<loginData.length;i++){
+        if(loginData[i].status === "true"){
+            window.open("./cart.html","_self");
+            break;
+        }
     }
 })
 profileName.style.display = "none";
@@ -44,8 +47,11 @@ for(let i = 0;i<loginData.length;i++){
     if(loginData[i].status === "true"){
         profileName.innerText = loginData[i].name;
         no2.style.display = "block";
-        profileName.style.display = "block"
-    }else{
+        profileName.style.display = "block";
+        no1.style.display = "none";
+        break;
+    }
+    else{
         no1.style.display = "block";
     }
 }
